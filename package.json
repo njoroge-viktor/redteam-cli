@@ -1,0 +1,47 @@
+{
+  "name": "@njoroge-viktor/redteam-cli",
+  "version": "0.1.0",
+  "description": "Adversarial prompt runner for LLM safety evaluation: attack suites, refusal classification and severity-weighted reporting.",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "bin": {
+    "redteam": "./bin/redteam.js"
+  },
+  "files": [
+    "src",
+    "bin",
+    "suites"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node --test test/",
+    "test:coverage": "c8 --check-coverage --lines 90 --functions 90 --branches 85 node --test test/",
+    "lint": "eslint src test bin --max-warnings 0",
+    "format:check": "prettier --check .",
+    "format": "prettier --write ."
+  },
+  "keywords": [
+    "llm",
+    "red-team",
+    "safety",
+    "jailbreak",
+    "prompt-injection",
+    "evaluation"
+  ],
+  "author": "Victor Njoroge <victornjoroge174@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/njoroge-viktor/redteam-cli.git"
+  },
+  "devDependencies": {
+    "c8": "^10.1.2",
+    "eslint": "^9.12.0",
+    "prettier": "^3.3.3"
+  }
+}
