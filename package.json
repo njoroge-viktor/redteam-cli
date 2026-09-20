@@ -19,8 +19,8 @@
     "node": ">=20"
   },
   "scripts": {
-    "test": "node --test test/",
-    "test:coverage": "c8 --check-coverage --lines 90 --functions 90 --branches 85 node --test test/",
+    "test": "node --test test/*.test.js",
+    "test:coverage": "c8 --check-coverage --lines 90 --functions 90 --branches 85 node --test test/*.test.js",
     "lint": "eslint src test bin --max-warnings 0",
     "format:check": "prettier --check .",
     "format": "prettier --write ."
